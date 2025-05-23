@@ -6,6 +6,7 @@
     - [Initiation:](#initiation)
     - [Planning:](#planning)
     - [execution:](#execution)
+    - [monitoring \& control:](#monitoring--control)
     - [closure:](#closure)
   - [Agile](#agile)
     - [scrum](#scrum)
@@ -38,7 +39,7 @@ Logical operators `and` (`&&`), `or` (`||`-pipe) `not` (`!` bang)
     age = 25
     is_imigrant = False
     if age >= 18 and not is_imigrant:	#and operator is used when we want both of the conditions to  
-    					#be true and not inverts the value from true to false
+#be true and not inverts the value from true to false
 					#>= is a relational operator and it returns a boolean
 					#it turns out to be true in this case because 18<25
         print("Eligible to vote")	
@@ -60,25 +61,26 @@ compare two values and return a boolean
 coming up with risk-management strategies.
 ### execution:
  Actually working on the project as per the plan.
-monitoring & control: This phase is about tracking progress, identifying potential issues and  making 
+### monitoring & control:
+ This phase is about tracking progress, identifying potential issues and  making 
 necessary adjustments to the plan based on your findings.
 ### closure:
  handing over necessary deliverables, documenting the lessons learned from working on the 
 project and closing it.
-Those are the primary phases now lets talk about 
+Those are the primary phases now let's talk about 
 ## Agile
  principles and practices that favor 
 adaptability based on feedback from the end users and the development team over sticking to the 
 the plan much more strictly. This approach is based on iterative, incremental deliverables prioritizing
-working software over comprehensive documentation. So basicaly adding to the bigger picture as you go 
-along rather than having a more complete vision that has to be executed as per a definitive plan. With such a flexible approach is much more forgiving if you unable to foresee all of the pitfalls and 
-potential issues that you might encounter because you're hoping that you will come up with sollutions 
+working software over comprehensive documentation. So basically adding to the bigger picture as you go 
+along rather than having a more complete vision that has to be executed as per a definitive plan. Such a flexible approach is much more forgiving if you are unable to foresee all of the pitfalls and 
+potential issues that you might encounter because you're hoping that you will come up with solutions 
 for problems after and as you encounter them. Based on this approach we have the 
 ### scrum
  project management framework to manage work in short iterative cycles called sprints. Keep this brief intro at the back of your head.
 ### Jira
  is a project management software used by teams to track the progress of a project, release a 
-deliverable and to support to the customer/end-user after its completion.
+deliverable and to support the customer/end-user after its completion.
 # git init
 ```
 git add .
@@ -92,6 +94,17 @@ git push -u origin main
     - [scrum](#scrum)
     - [Jira](#jira)
 - [git init](#git-init)
+# Functions and macros
+A function is a block of code that that performs a particular task and it can 
+be reused after being defined once which is great for modularity.
+## macros
+can extend the capabilities of the programming language itself by automating
+repetitive tasks. A macro in C begins with a `#` symbol and it specifies how a
+certain input should be mapped to a replacement output. It can be used to create function-like
+constructs. They act as shortcuts in the text editor by replacing certain text before code compilation.
+Some of these function-like macros can even mimic features of a function like accepting arguments. The
+most widespread example of this is `#define PI 3.14` defines a constant named PI that will be replaced with
+3.14 before the code is compiled.
 
 
 
