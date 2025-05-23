@@ -80,24 +80,19 @@ for problems after and as you encounter them. Based on this approach we have the
  is a project management software used by teams to track the progress of a project, release a 
 deliverable and to support to the customer/end-user after its completion.
 # git init
+```
 git add .
 git commit -m "x"
 git branch -M main
 git remote add origin https://github.com/penteler/aex.git
 git push -u origin main
-- [Expressions, Assignments, data types, Variables, operators](#expressions-assignments-data-types-variables-operators)
-  - [Variables](#variables)
-  - [Assignment](#assignment)
-- [Project management phases and project management software](#project-management-phases-and-project-management-software)
-  - [Phases:](#phases)
-    - [Initiation:](#initiation)
-    - [Planning:](#planning)
-    - [execution:](#execution)
+```
     - [closure:](#closure)
   - [Agile](#agile)
     - [scrum](#scrum)
     - [Jira](#jira)
 - [git init](#git-init)
+
 
 
 
