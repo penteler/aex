@@ -1,3 +1,17 @@
+- [Expressions, Assignments, data types, Variables, operators](#expressions-assignments-data-types-variables-operators)
+  - [Variables](#variables)
+  - [Assignment](#assignment)
+- [Project management phases and project management software](#project-management-phases-and-project-management-software)
+  - [Phases:](#phases)
+    - [Initiation:](#initiation)
+    - [Planning:](#planning)
+    - [execution:](#execution)
+    - [closure:](#closure)
+  - [Agile](#agile)
+    - [scrum](#scrum)
+    - [Jira](#jira)
+- [git init](#git-init)
+
 # Expressions, Assignments, data types, Variables, operators
 ## Variables
  are just named  storage locations that hold a value and these can be changed at the time of execution.
@@ -71,6 +85,19 @@ git commit -m "x"
 git branch -M main
 git remote add origin https://github.com/penteler/aex.git
 git push -u origin main
+- [Expressions, Assignments, data types, Variables, operators](#expressions-assignments-data-types-variables-operators)
+  - [Variables](#variables)
+  - [Assignment](#assignment)
+- [Project management phases and project management software](#project-management-phases-and-project-management-software)
+  - [Phases:](#phases)
+    - [Initiation:](#initiation)
+    - [Planning:](#planning)
+    - [execution:](#execution)
+    - [closure:](#closure)
+  - [Agile](#agile)
+    - [scrum](#scrum)
+    - [Jira](#jira)
+- [git init](#git-init)
 
 
 
