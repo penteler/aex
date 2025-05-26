@@ -12,6 +12,12 @@
     - [scrum](#scrum)
     - [Jira](#jira)
 - [git init](#git-init)
+- [Functions and macros](#functions-and-macros)
+  - [macros](#macros)
+- [Database management](#database-management)
+- [Unguided data transmission](#unguided-data-transmission)
+- [Connecting branch offices](#connecting-branch-offices)
+- [The Internet](#the-internet)
 
 # Expressions, Assignments, data types, Variables, operators
 ## Variables
@@ -37,8 +43,8 @@ The types of operations that can be carried out on any data are determined by
 Logical operators `and` (`&&`), `or` (`||`-pipe) `not` (`!` bang)
 ```
     age = 25
-    is_imigrant = False
-    if age >= 18 and not is_imigrant:	#and operator is used when we want both of the conditions to  
+    is_immigrant = False
+    if age >= 18 and not is_immigrant:	#and operator is used when we want both of the conditions to  
 #be true and not inverts the value from true to false
 					#>= is a relational operator and it returns a boolean
 					#it turns out to be true in this case because 18<25
@@ -105,7 +111,13 @@ constructs. They act as shortcuts in the text editor by replacing certain text b
 Some of these function-like macros can even mimic features of a function like accepting arguments. The
 most widespread example of this is `#define PI 3.14` defines a constant named PI that will be replaced with
 3.14 before the code is compiled.
-
-
+# Database management
+A database is an organized collection of data that can be accessed and updated conveniently. A database management system is the type of software that is used to manage a database. It has to help with creation, update, deletion, backup and recovery of data. MySQL is a popular DBMS. It is especially helpful for data security in a multi-user environment.
+# Unguided data transmission
+Guided channel for data transmission is simply wired and unguided channels are wireless. So if you use a pair of insulated twisted wires, or a coaxial cable or a fibre-optic cable then you're using guided media and if you're using radio waves for wi-fi or for cellular services then your data is being transmitted through unguided media Another type of unguided data transmission uses infrared waves and it is useful for short range remote control.
+# Connecting branch offices
+We would require a LAN at every branch office of the organization. This type of network is only suitable for something small like an office building. It provides total control over the network and it requires hardware like network switches, repeaters and routers and the cost of maintaining and running this type of a network is really the cost keeping the lights on (or having an uninterrupted power supply). Now in order to connect these offices we would require a WAN (or a wide area network). This type of network is usually slower than LAN because of the distances involved and one has to rely on network infrastructure of ISPs (internet service providers) and hence they have to pay monthly bills and because this network is being used by many more people all across the world one has to have various security measures in place such as a firewall.
+# The Internet
+The internet is a globe spanning network of interconnected computers and other devices. These devices communicate with each other using standard communication protocols. Users can share information on this network using services like email. They can browse websites, stream videos and transmit all kinds of data. TCP/IP (Transmission Control Protocol and Internet Protocol) are both foundational to the internet. Transmission control ensures reliable data transmission and IP is for addressing and routing. HTTP (Hypertext transfer protocol) and HTTPS its secure version are used for websites. DNS (Domain name system) translates domain names like google.com into IP addresses and this is why URLs are related to ip addresses. Actually the web addresses like wikipedia.org are actually just a domain name that is easily readable by a human it is actually the DNS that translates this to an IP address which can actually be used to identify and pinpoint a location.
 
 
