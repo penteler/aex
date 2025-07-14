@@ -29,3 +29,5 @@ timeline
 20: lost gloves: found gloves: gathering fodder: hauling fodder
 21: moving the car: helping out with departure: eating mangoes: drinking tea and soda
 22: more logging and pushing: preparing bootable devices as per the aggenda: feeding the cows: going though as many MCQs as I can
+23: more dinner: the sunday show
+```
