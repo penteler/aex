@@ -164,3 +164,6 @@ C:\Users\surin\vcsol\aex>tail fyt.md
 operable program or batch file.
 
 C:\Users\surin\vcsol\aex>
+git add .
+git commit -m "x"
+git push -u origin main
