@@ -1,8 +1,8 @@
-```math
-/[
-/sum_{i=2}^{n} x_i y_i
-/]
-```
+
+$$
+sum_{i=2}^{n} x_i y_i
+$$
+
 ## first
 ``` mermaid
 flowchart TD;
