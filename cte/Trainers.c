@@ -15,3 +15,8 @@ struct Trainer {
    char dateofjoining[15];
 };
 
+void createRecord(struct Trainer trainers[], int *count);
+void listRecords(struct Trainer trainers[], int count);
+void modifyRecord(struct Trainer trainers[], int count);
+void deleteRecord(struct Trainer trainers[], int *count);
+

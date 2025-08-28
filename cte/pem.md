@@ -1,3 +1,10 @@
+ 
+- [preprocessor directives](#preprocessor-directives)
+- [structure definition](#structure-definition)
+- [function prototypes](#function-prototypes)
+  - [parameter list](#parameter-list)
+    - [function arguments](#function-arguments)
+ 
 ## preprocessor directives
 ```c
 #include <stdio.h>
@@ -46,4 +53,16 @@ void listRecords(struct Trainer trainers[], int count);
 void modifyRecord(struct Trainer trainers[], int count);
 void deleteRecord(struct Trainer trainers[], int *count);
 ```
-The return type `void` will return no value.
+The return type `void` will return no value. The function prototype begins with 
+the return type followed by the name of the function and then we have a parameter 
+list and a compulsory semicolon as a statement terminator to end the declaration.
+### parameter list
+The `struct` keyword introduces a structure type and `Trainer` is the struct tag which makes 
+`struct Trainer` the  type specifier and `trainers[]` is an array of the `struct Trainer`.
+When an array is passed to a function it decays to  a pointer to its first element.
+#### function arguments
+When passing array to a function even if the function parameter is declared as `int array[]`
+it is internally treated as a pointer to the first element `int* array`. When this 
+happens the compiler loses track of the original size of the array so sizeof(array) will return 
+size of the pointer type which can be 4-8 bytes regardless of the size of the array.
+
