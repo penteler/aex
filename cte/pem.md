@@ -1,8 +1,11 @@
  
 - [preprocessor directives](#preprocessor-directives)
 - [structure definition](#structure-definition)
-- [function prototypes](#function-prototypes)
+- [function prototypes AKA declarations](#function-prototypes-aka-declarations)
   - [parameter list](#parameter-list)
+      - [pointers](#pointers)
+        - [addresses](#addresses)
+        - [reading](#reading)
     - [function arguments](#function-arguments)
  
 ## preprocessor directives
@@ -46,7 +49,7 @@ variable here the semicolon terminates the declaration. The float datatype holds
 number (decimal). The closing brace `}` ends the definition and it is also followed by a statement 
 terminator at the end of the declaration.
 
-## function prototypes
+## function prototypes AKA declarations
 ```c
 void createRecord(struct Trainer trainers[], int *count);
 void listRecords(struct Trainer trainers[], int count);
@@ -60,6 +63,21 @@ list and a compulsory semicolon as a statement terminator to end the declaration
 The `struct` keyword introduces a structure type and `Trainer` is the struct tag which makes 
 `struct Trainer` the  type specifier and `trainers[]` is an array of the `struct Trainer`.
 When an array is passed to a function it decays to  a pointer to its first element.
+##### pointers
+are variables that store *memory addresses* as their values
+###### addresses 
+like `0x1000` which can be read as hex one thousand or hex one zero zero zero
+If the value of a variable is the memory address of another variable then we can 
+say that the former points to the later and that is way we call it a pointer. The 
+pointer to an integer can point to a 4 byte value.
+###### reading
+`int x = 4;` **integer named x is set to 4 the value.** Integer data type is ***4*** bytes wide. 
+`int *pX = &x;` **integer pointer named pX is set to the address of x.**
+`*` when placed next to type it modifies the variable so now this 
+variable is a pointer
+`int y = *pX;` **integer named y is set to the thing pointed to by pX** here the `*` is 
+a dereference so we are saying go to the address pointed to by the pointer and fetch that 
+value.
 #### function arguments
 When passing array to a function even if the function parameter is declared as `int array[]`
 it is internally treated as a pointer to the first element `int* array`. When this 
