@@ -83,4 +83,48 @@ When passing array to a function even if the function parameter is declared as `
 it is internally treated as a pointer to the first element `int* array`. When this 
 happens the compiler loses track of the original size of the array so sizeof(array) will return 
 size of the pointer type which can be 4-8 bytes regardless of the size of the array.
+## The main function
+```c
+int main() {
+    struct Trainer trainers[100];
+    int count = 0;
+    int choice;
+    
+    do {
+        printf("\n === Trainers === \n");
+        Printf("1. Create record\n");
+        printf("2. List record\n");
+        printf("3. Modify record\n");
+        printf("4. Delete record\n");
+        printf("5. Exit");
+        printf("Enter your choice");
+        scanf("%d", &choice);
+        
+        switch(choice) {
+            case 1:
+                createRecord(trainers, &count);
+                break;
+            case 2:
+                listRecords(trainers, count);
+                break;
+            case 3:
+                modifyRecord(trainers, count);
+                break;
+            case 4:
+                deleteRecord(trainers, &count);
+                break;
+            case 5:
+                printf("\n Exiting... \n");
+                break;
+            default:
+                printf("\n not a valid choice! \n");
+        }    
+    } while(choice != 5);
+
+    return 0;
+}
+```
+
+
+
 
