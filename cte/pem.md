@@ -124,6 +124,32 @@ int main() {
     return 0;
 }
 ```
+The return type of this function is integer which will be 0 in this case if everything goes well.
+The curly brace `{` begins the function body/compoud statement. After the element type `struct 
+trainer` we will delclare an array named trainers with a maximum of 100 elements `trainers[100];`
+ Then we will declare a variable of integer type named count initialized to 0 `int count = 0;` 
+for the number of slots that have been filled. Then we will declare `int choice;` while it it 
+ uninitialised here this will be set later based on the `scanf("")`
+### Do while loop
+begins with `do {` and the curly brace is there to open the loop body. This contains the  
+`printf("")` will print formatted text to the `stdout`. A string litteral is the only argument 
+with the call. This `\n` new line character can be used in the string. Unless you want the 
+cursor to remain on the same line right before using `scanf` to read formatted input from 
+`stdin`. `%d` format string is for reading a decimal integer `&` is the address-of operator 
+gives the `int*` as required by `scanf`. Then we have a selection statement that jumps 
+to a `case` based on `choice`here `choice` is the controling expression and the curly brace 
+opens the switch body `switch(choice) {`. for instance if the choice is 1 we will jump to `case 1` 
+which is for `createRecord(trainers, &count);` Just as earlier when we pass the trainers array it 
+decays to the pointer to the first element and by passing the address of count we are enabling the 
+function to modify the caller's `count`. To ensure that the execution doesn't "fall through" to the 
+next case we have to have a `break` to  exit the switch. To `listRecords(trainers, count);` we need 
+call the count by value and `break` to end the case. For an incorrect choice we have a `default`.
+Then we will end/close the switch and the while loop `} while(choice != 5);` The brackets are for the 
+condition grouping and `!=` is the not equal to relational operator. It should be noted that only 
+do-while has a semicolon after its condition. Then of course when all of this runs we wan't to 
+`return 0;` for success before closing main.
+
+
 
 
 
