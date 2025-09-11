@@ -68,7 +68,7 @@ are variables that store *memory addresses* as their values
 ###### addresses 
 like `0x1000` which can be read as hex one thousand or hex one zero zero zero
 If the value of a variable is the memory address of another variable then we can 
-say that the former points to the later and that is way we call it a pointer. The 
+say that the former points to the later and that is why we call it a pointer. The 
 pointer to an integer can point to a 4 byte value.
 ###### reading
 `int x = 4;` **integer named x is set to 4 the value.** Integer data type is ***4*** bytes wide. 
@@ -79,7 +79,7 @@ variable is a pointer
 a dereference so we are saying go to the address pointed to by the pointer and fetch that 
 value.
 #### function arguments
-When passing array to a function even if the function parameter is declared as `int array[]`
+When passing an array to a function even if the function parameter is declared as `int array[]`
 it is internally treated as a pointer to the first element `int* array`. When this 
 happens the compiler loses track of the original size of the array so sizeof(array) will return 
 size of the pointer type which can be 4-8 bytes regardless of the size of the array.
