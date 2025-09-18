@@ -148,6 +148,21 @@ Then we will end/close the switch and the while loop `} while(choice != 5);` The
 condition grouping and `!=` is the not equal to relational operator. It should be noted that only 
 do-while has a semicolon after its condition. Then of course when all of this runs we wan't to 
 `return 0;` for success before closing main.
+## function definition for `createRecord`
+```c
+void createRecord(struct Trainer trainers[], int *count){
+    printf("\n Enter trainer ID: ");
+    scanf("%d", &trainers[*count].trainerID);
+    getchar();
+
+    printf("\n Enter the name of the trainer: ");
+    fgets(&trainers[*count].name, sizeof(trainers[*count].name), stdin)
+    trainers[*count].name[strcspn(trainers[*count].name, "\n" = '\0'`
+
+
+```
+> note type of a thing
+
 
 
 
