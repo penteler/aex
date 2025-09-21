@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main() {
-  char thet[77];
+  
   char theSt[] = " 1234,56.789?0l ";
   int pos = strcspn(theSt, ",.?l");
   printf("without strcspn: %s as a whole\n ", theSt);
