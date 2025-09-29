@@ -1,0 +1,22 @@
+### The economy and living standards:
+
+They have a large rural population and their economy is mostly agricultural.
+Life expectancy is lower than the global average and the infant mortality is
+high.
+### diversity
+The population is quite diverse with a mix of Asian and European 
+Expats/immigrants and native people with multiple languages and religious 
+beliefs.
+There was an regional conflict fueled by ethnic divisions in the past but by 
+2008 it had been resolved with a unified malawian call for peace.
+Their local cuisine and cultural practices resemble local and other Southern 
+African cultures but it has also been influenced by Asian and European cultures Their ceremonies and cultural practices are marked by Malawian music and very 
+unique dances. 
+Soccer was introduced here during the colonial era and it continues to be 
+the most popular sport in the country but a number of other sports such as 
+basketball are also growing in popularity.
+They make use of handcrafted traditional baskets in their ceremonies along with mask carvings.
+Their are a number of internationally renowned literary figures from here.
+In urban centers making oil paintings and wood working is also quite common 
+and tourists tend to buy such items as souvenirs when departing this country.
+
