@@ -77,4 +77,13 @@ which can be a general purpose register or memory.
 
 ---
 
-I
+I think memory allocation and code generation (here code is the sequence 
+of machine instructions) happens during compilation and then during 
+execution the instructions to initialize the variables is executed. The 
+values are loaded into the memory addresses assigned to the variables. After 
+this the control unit issues commands to load the values from the memory 
+addresses and into the CPU registers and then the ALU gets instructed to 
+perform the operation on the values in the two registers and store the result 
+in a third register. Then the value from the third register is stored back to 
+memory location reserved for the third variable in this case because the third 
+variable is the difference between the first and second variables.
