@@ -1,3 +1,173 @@
+
+t
+
+
+# Step-by-step SRTF explanation and calculations
+
+Nice — let’s walk through **exactly how SRTF (Shortest Remaining Time First)** decides what to run, and compute the completion times for **B, C, D** (we’ll also recap A), then compute turnaround and waiting times. I’ll show the key decision points (arrivals/completions) and the remaining-time comparisons that determine which job runs.
+
+---
+
+## Quick rules of SRTF
+
+* At any moment the CPU runs the *ready* process with the **smallest remaining CPU time**.
+* If a new process arrives whose remaining time is **less than** the currently running process’s remaining time, the CPU **preempts** and switches to the new one.
+* If two ready processes have the same remaining time, a tie-breaker is needed (common choices: earlier arrival first, or fixed priority). We won’t hit a tie here.
+
+---
+
+## Given jobs
+
+| Job | Arrival time | Total run time (burst) |
+| --- | -----------: | ---------------------: |
+| A   |            0 |                      4 |
+| B   |            2 |                      5 |
+| C   |            3 |                      6 |
+| D   |            5 |                      5 |
+
+---
+
+## Timeline and decision points (detailed)
+
+We'll show the system state at the times when arrivals or completions happen: `t = 0, 2, 3, 4, 5, 9, 14, 20`. At each point we list which jobs are ready and their remaining times, then say what runs next.
+
+### t = 0
+
+* Arrived: A (remaining = 4)
+* Ready queue: A(4) → **A runs**.
+
+A runs from **t = 0 → t = 2** (no other arrivals yet). After 2 units of execution:
+
+* A remaining = 4 − 2 = **2**.
+
+### t = 2 (B arrives)
+
+* Newly arrived: B (remaining = 5)
+* Ready: A(2), B(5)
+* **Shortest remaining** is A(2) < B(5) → **A continues**.
+
+A runs from **t = 2 → t = 3** (1 unit), leaving:
+
+* A remaining = 2 − 1 = **1**.
+
+### t = 3 (C arrives)
+
+* Newly arrived: C (remaining = 6)
+* Ready: A(1), B(5), C(6)
+* Shortest remaining is A(1) → **A continues**.
+
+A runs from **t = 3 → t = 4** (1 unit) and **completes at t = 4**.
+So **Completion time(A) = 4**.
+
+---
+
+### t = 4 (after A finishes)
+
+* Ready now: B(5) [arrived at 2], C(6) [arrived at 3]
+* Compare remaining: B(5) vs C(6) → **B is shorter** → **B starts at t = 4**.
+
+B runs from **t = 4 → t = 5** (1 unit). After that:
+
+* B remaining = 5 − 1 = **4**.
+
+### t = 5 (D arrives)
+
+* Newly arrived: D (remaining = 5)
+* Ready: B(4), C(6), D(5)
+* Compare remaining times: B(4), D(5), C(6) → **B has the shortest remaining (4)** → **B continues** (no preemption).
+
+B runs from **t = 5 → t = 9** (4 more units) and **completes at t = 9**.
+So **Completion time(B) = 9**.
+
+---
+
+### t = 9 (after B finishes)
+
+* Ready: C(6), D(5)
+* Compare: D(5) vs C(6) → **D is shorter** → **D runs**.
+
+D runs from **t = 9 → t = 14** (5 units) and **completes at t = 14**.
+So **Completion time(D) = 14**.
+
+---
+
+### t = 14 (after D finishes)
+
+* Only C remains: C(6) → **C runs from 14 → 20** and **completes at t = 20**.
+  So **Completion time(C) = 20**.
+
+---
+
+## Gantt-chart style summary (intervals)
+
+```
+0 —— 4 : A
+4 —— 9 : B
+9 ——14 : D
+14——20 : C
+```
+
+(Each arrow interval shows the job running on CPU during that time.)
+
+---
+
+## Why that order? (shortest-remaining comparisons)
+
+At each arrival/completion we compared the **remaining burst** of all ready jobs. If the newly arrived job had a **smaller remaining time** than the currently running job, it would preempt. In this scenario:
+
+* When B arrived at t=2, A had remaining=2 which was still smaller → no preempt.
+* When C arrived at t=3, A had remaining=1 → no preempt.
+* When D arrived at t=5, B had remaining=4 which was smaller than D's 5 → no preempt.
+* After B finished at t=9, among waiting jobs D(5) and C(6) we picked D (5 < 6).
+  So SRTF simply chooses the smallest remaining among *ready* jobs at every decision point.
+
+---
+
+## Turnaround time and Waiting time calculations
+
+Formulas:
+
+* **Turnaround time** (TAT) = Completion time − Arrival time
+* **Waiting time** (WT) = Turnaround time − Run time
+
+We already have completion times:
+A=4, B=9, C=20, D=14.
+
+Compute per job:
+
+| Job | Arrival | Run | Completion | Turnaround = C − A | Waiting = TAT − Run |
+| --- | ------: | --: | ---------: | -----------------: | ------------------: |
+| A   |       0 |   4 |          4 |      4 − 0 = **4** |       4 − 4 = **0** |
+| B   |       2 |   5 |          9 |      9 − 2 = **7** |       7 − 5 = **2** |
+| C   |       3 |   6 |         20 |    20 − 3 = **17** |     17 − 6 = **11** |
+| D   |       5 |   5 |         14 |     14 − 5 = **9** |       9 − 5 = **4** |
+
+Average values:
+
+* **Average Turnaround** = (4 + 7 + 17 + 9) / 4 = 37 / 4 = **9.25**
+* **Average Waiting** = (0 + 2 + 11 + 4) / 4 = 17 / 4 = **4.25**
+
+---
+
+## Key takeaways (to solidify understanding)
+
+1. **SRTF is preemptive** — a running job can be interrupted if a newly arrived job has **less remaining time**.
+2. At every **arrival** or **completion** we re-evaluate the ready set and pick the job with the smallest remaining time.
+3. You only need to compare *remaining* times of ready processes — not total burst times of not-yet-arrived jobs.
+4. SRTF minimizes average waiting time among non-pathological inputs but needs accurate knowledge of remaining times and can cause starvation for long jobs.
+5. For bookkeeping, it helps to write the system state at key instants (arrivals and completions) listing remaining times — that’s what we did above.
+
+---
+
+If you want, I can:
+
+* show the same scheduling with a **per-unit time table** (listing running process and remaining times at every integer time) for extra clarity, or
+* produce a **neat diagram** you can paste into your assignment. Which would help you more?
+
+
+# 0
+
+
 Perfect — this is a classic **CPU Scheduling** assignment question.
 Let’s carefully solve it **step by step** for all three algorithms: **SRTF**, **SJF**, and **Round Robin (q=2)**.
 
