@@ -17,7 +17,7 @@ gantt
     C :active, 4, 5
     D :active, 5, 10
     B :active, 10, 15
-    C :active, 15, 21
+    C :active, 15, 21 
 
 %%---------------------------------------------------
 %% SJF (Shortest Job First) - Non-preemptive
