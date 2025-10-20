@@ -19,11 +19,7 @@ gantt
     B :active, 10, 15
     C :active, 15, 21 
 
-%%---------------------------------------------------
-%% SJF (Shortest Job First) - Non-preemptive
-%%---------------------------------------------------
-gantt
-    title SJF Scheduling
+
     dateFormat  X
     axisFormat  %L
     section Execution
