@@ -17,9 +17,7 @@ gantt
     C :active, 4, 5
     D :active, 5, 10
     B :active, 10, 15
-    C :active, 15, 21 
-
-
+    C :active, 15, 20
     dateFormat  X
     axisFormat  %L
     section Execution
@@ -28,11 +26,7 @@ gantt
     D :active, 9, 14
     C :active, 14, 20
 
-%%---------------------------------------------------
-%% Round Robin (Quantum = 2)
-%%---------------------------------------------------
-gantt
-    title Round Robin (Q=2)
+
     dateFormat  X
     axisFormat  %L
     section Execution
