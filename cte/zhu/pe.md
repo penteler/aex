@@ -1,3 +1,33 @@
+y
+```mermaid
+gantt
+    title Round Robin Scheduling (Quantum = 2)
+    dateFormat  X
+    axisFormat  %L
+    section Jobs
+    A :active, A1, 0, 2
+    B :active, B1, 2, 2
+    A :active, A2, 4, 2
+    C :active, C1, 6, 2
+    B :active, B2, 8, 2
+    D :active, D1, 10, 2
+    C :active, C2, 12, 2
+    B :active, B3, 14, 1
+    D :active, D2, 15, 2
+    C :active, C3, 17, 2
+    D :active, D3, 19, 1
+```
+
+✅ **Interpretation:**
+
+* Quantum = 2
+* A finishes at time 6
+* B finishes at time 15
+* C finishes at time 19
+* D finishes at time 20
+
+
+
 
 t
 
