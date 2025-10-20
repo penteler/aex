@@ -1,3 +1,152 @@
+
+w
+---
+
+```mermaid
+%%---------------------------------------------------
+%% SRTF (Shortest Remaining Time First)
+%%---------------------------------------------------
+gantt
+    title SRTF Scheduling
+    dateFormat  X
+    axisFormat  %L
+    section Execution
+    A :active, 0, 2
+    B :active, 2, 3
+    A :active, 3, 4
+    C :active, 4, 5
+    D :active, 5, 10
+    B :active, 10, 15
+    C :active, 15, 21
+
+%%---------------------------------------------------
+%% SJF (Shortest Job First) - Non-preemptive
+%%---------------------------------------------------
+gantt
+    title SJF Scheduling
+    dateFormat  X
+    axisFormat  %L
+    section Execution
+    A :active, 0, 4
+    B :active, 4, 9
+    D :active, 9, 14
+    C :active, 14, 20
+
+%%---------------------------------------------------
+%% Round Robin (Quantum = 2)
+%%---------------------------------------------------
+gantt
+    title Round Robin (Q=2)
+    dateFormat  X
+    axisFormat  %L
+    section Execution
+    A :active, 0, 2
+    B :active, 2, 4
+    A :active, 4, 6
+    C :active, 6, 8
+    B :active, 8, 10
+    D :active, 10, 12
+    C :active, 12, 14
+    B :active, 14, 15
+    D :active, 15, 17
+    C :active, 17, 19
+    D :active, 19, 20
+```
+
+---
+
+
+
+e
+
+
+---
+
+```mermaid
+gantt
+    title Round Robin Scheduling (Quantum = 2)
+    dateFormat  X
+    axisFormat  %L
+    section Jobs
+    A :active, 0, 2
+    B :active, 2, 4
+    A :active, 4, 6
+    C :active, 6, 8
+    B :active, 8, 10
+    D :active, 10, 12
+    C :active, 12, 14
+    B :active, 14, 15
+    D :active, 15, 17
+    C :active, 17, 19
+    D :active, 19, 20
+```
+
+---
+
+### ✅ Interpretation:
+
+* **A** runs at times **0–2** and **4–6**, then finishes.
+* **B** runs at **2–4**, **8–10**, and **14–15** (finishes).
+* **C** runs at **6–8**, **12–14**, and **17–19** (finishes).
+* **D** runs at **10–12**, **15–17**, and **19–20** (finishes).
+
+This aligns with the completion times we computed earlier:
+
+| Job | Completion | Turnaround | Waiting |
+| --- | ---------- | ---------- | ------- |
+| A   | 6          | 6          | 2       |
+| B   | 15         | 13         | 8       |
+| C   | 19         | 16         | 10      |
+| D   | 20         | 15         | 10      |
+
+**Average turnaround = 12.5**
+
+r
+
+---
+
+```mermaid
+gantt
+    title Round Robin Scheduling (Quantum = 2)
+    dateFormat  X
+    axisFormat  %L
+    section Jobs
+    A :active, 0, 2
+    B :active, 2, 4
+    A :active, 4, 6
+    C :active, 6, 8
+    B :active, 8, 10
+    D :active, 10, 12
+    C :active, 12, 14
+    B :active, 14, 15
+    D :active, 15, 17
+    C :active, 17, 19
+    D :active, 19, 20
+```
+
+---
+
+### ✅ Interpretation:
+
+* **A** runs at times **0–2** and **4–6**, then finishes.
+* **B** runs at **2–4**, **8–10**, and **14–15** (finishes).
+* **C** runs at **6–8**, **12–14**, and **17–19** (finishes).
+* **D** runs at **10–12**, **15–17**, and **19–20** (finishes).
+
+This aligns with the completion times we computed earlier:
+
+| Job | Completion | Turnaround | Waiting |
+| --- | ---------- | ---------- | ------- |
+| A   | 6          | 6          | 2       |
+| B   | 15         | 13         | 8       |
+| C   | 19         | 16         | 10      |
+| D   | 20         | 15         | 10      |
+
+
+
+
+For the given data we would arrive at the same completion times and waiting times because 
+these jobs will be executed in the exact same order using SJF just as they did for SRTF.i
 y
 ```mermaid
 gantt
