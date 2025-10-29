@@ -11,7 +11,6 @@ flowchart TD
     G --> H[binary = binary / 10]
     H --> D
     D -->|No| I[/Print decimal value (dec)/]
-    I --> J([Stop])
 ```
 
 ---
