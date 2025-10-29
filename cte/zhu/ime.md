@@ -1,3 +1,27 @@
+# 4
+techniques for improving i/O performance:
+Buffering is the temporary use of the memory as a buffer to hold data while it is being 
+transferred to and from different processes and devices. 
+It improves performance by acting as a 
+speed matching mechanism. If there is data that is in the buffer it can be processed quickly 
+in mean time data could be fetched from a much slower storage device continuously to be 
+added to the buffer. This reduces interruptions for a much smoother experience.
+
+Caching is the process of storing frequently accessed data in a faster memory location so 
+that future requests for the same data can be served more quickly. Retrieving data from the 
+cache is much faster than fetching it from something like a remote server. For example: upon 
+the fist visit of a website images like the logo of the website can get cached this enables 
+it to load much faster when being revisited because it won't have to download the same image 
+twice.
+SPOOLing (Simultaneous Peripheral Operations On-Line) really comes in handy when using 
+devices that can only handle a single task at any given moment. Queueing data for the 
+device to process when the current task has been completed allows the user assign multiple 
+tasks and check back to see when they have been completed. Sending Multiple print jobs to a 
+singular printer for instance is only posible because they can be queued(stored) in a print 
+spool to be processed one by one.
+
+
+# 1
 Let’s break this down clearly and systematically 👇
 
 ---
