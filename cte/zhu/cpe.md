@@ -10,7 +10,7 @@ flowchart TD
     F --> G[base = base * 2]
     G --> H[binary = binary / 10]
     H --> D
-    D -->|No| I[/Print decimal value (dec)/]
+    
 ```
 
 ---
