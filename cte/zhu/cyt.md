@@ -5,7 +5,7 @@ Algorithm for converting binary to decimal:
     . `dec = 0` (store decimal result)
     . `base = 1`(for 2^0 initially)
 4. Repeat while `bin > 0`
-    . `last_digit = bin % 10
+    . `last_digit = bin % 10`
     . `dec = dec + last-digit * base` 
     . `base = base * 2`
     . `bin = bin / 10`
