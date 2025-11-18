@@ -1,0 +1,42 @@
+
+20H2 19042.985
+
+dir feg1.jpg /s
+
+gcc bud.c -o b
+
+
+
+
+
+netsh wlan connect name="realme_RMX2156_co_aplvie" ssid="realme_RMX2156_co_aplvie"
+netsh wlan connect name="Galaxy A313619"
+netsh wlan connect name="Galaxy A313619" ssid="Galaxy A313619"
+
+netsh wlan set profileparameter name="BSNL_FTTH" connectionmode=manual
+
+netsh wlan set profileparameter name="BSNL_FTTH" connectionmode=auto
+
+netsh wlan connect name="Galaxy A313619" ssid="Galaxy A313619"
+netsh wlan show profiles
+netsh wlan connect name="Galaxy A313619" ssid="Galaxy A313619"
+
+winver
+
+shutdown /h
+
+cd ../..
+
+cd %USERPROFILE%
+cd %USERPROFILE%\vcsol\aex
+cd vcsol\aex\cte\zgu
+write fys.odt
+mkdir zgu
+cd zgu
+notepad fys
+
+git add . && git commit -m "x" && git push
+ git add .
+git commit -m "x"
+git push -u origin main
+doskey /history

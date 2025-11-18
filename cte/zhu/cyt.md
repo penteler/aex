@@ -1,6 +1,6 @@
 Algorithm for converting binary to decimal:
 1. Start
-2. input a binary number (eg: bno)
+2. input a binary number (eg: bin)
 3. initialize:
     . `dec = 0` (store decimal result)
     . `base = 1`(for 2^0 initially)
