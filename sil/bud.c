@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    long long binary;
-    int decimal = 0, base = 1, remainder;
+    long long bin;
+    int dec = 0, base = 1, last_digit;
 
     printf("Enter a binary number: ");
-    scanf("%lld", &binary);
+    scanf("%lld", &bin);
 
-    while (binary > 0) {
-        remainder = binary % 10;
-        decimal = decimal + remainder * base;
-        binary = binary / 10;
+    while (bin > 0) {
+        last_digit = bin % 10;
+        dec = dec + (last_digit * base);
+        bin = bin / 10;
         base = base * 2;
     }
 
-    printf("Equivalent Decimal Number: %d\n", decimal);
+    printf("Equivalent Decimal Number: %d\n", dec);
     return 0;
 }
