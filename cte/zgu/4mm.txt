@@ -5,6 +5,8 @@ dir feg1.jpg /s
 
 gcc bud.c -o b
 
+in detail line by line, character by character, bit by bit, including every bit of syntax.
+
 
 
 
