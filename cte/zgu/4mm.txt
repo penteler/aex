@@ -14,7 +14,7 @@ in detail line by line, character by character, bit by bit, including every bit 
 netsh wlan connect name="realme_RMX2156_co_aplvie" ssid="realme_RMX2156_co_aplvie"
 netsh wlan connect name="Galaxy A313619"
 netsh wlan connect name="Galaxy A313619" ssid="Galaxy A313619"
-
+netsh wlan connect name="BSNL_FTTH" ssid="BSNL_FTTH"
 netsh wlan set profileparameter name="BSNL_FTTH" connectionmode=manual
 
 netsh wlan set profileparameter name="BSNL_FTTH" connectionmode=auto
