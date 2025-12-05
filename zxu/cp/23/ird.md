@@ -204,3 +204,57 @@ If you’d like, I can also:
 
 Just let me know!
 
+You’ve got the right idea and you explained it well, but here’s the **one key correction / clarification**:
+
+### 🔍 The newline **is not** inside the inner loop
+
+You're right that it *looks* like it prints a newline after every asterisk — but actually, it prints:
+
+* several `*` characters in the inner loop
+* **one** newline after the inner loop finishes
+
+So the real output per `i` iteration is:
+
+* print `i+1` stars (because `j` goes from `0` to `i`)
+* then print one newline
+
+That means:
+
+|  i | j values printed | stars printed | newline |
+| -: | ---------------- | ------------- | ------- |
+|  0 | 0                | `*`           | after   |
+|  1 | 0,1              | `**`          | after   |
+|  2 | 0,1,2            | `***`         | after   |
+|  3 | 0,1,2,3          | `****`        | after   |
+
+So the program outputs:
+
+```
+*
+**
+***
+****
+```
+
+### One more micro-correction
+
+`void main()` is not standard in C.
+The correct declaration is:
+
+```c
+int main(void)
+```
+
+Or
+
+```c
+int main()
+```
+
+(Your compiler will probably accept `void main()`, but it’s not portable or standard-compliant.)
+
+---
+
+If you have your next topic ready, I’m all ears—what would you like to explore next?
+
+

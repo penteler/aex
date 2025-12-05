@@ -5,7 +5,7 @@ int main() {
 	long int fact = 1;
 
 	printf("Enter a number: ");
-	scanf("%d, &num");
+	scanf("%d", &num);
 
 	if (num < 0) {
 		printf("Factorial of a negative number doesn't exist.\n");
