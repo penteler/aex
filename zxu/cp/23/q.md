@@ -1,3 +1,24 @@
+Q1. The following table shows the distribution of response times (in milliseconds) for a web server over
+a period of 100 requests: (10 Marks)
+Response Time (ms) 0-10 10-20 20-30 30-40 40-50 50-60
+Number of Requests 8 15 25 30 12 10
+(a) Calculate the Mean and Median response time.
+(b) Calculate the Standard Deviation of the response times.
+(c) Draw a Histogram for the given data.
+Q2. To study the relationship between the number of hours spent studying per week and the marks
+obtained in an examination, a sample of 10 students was taken. The data is as follows: (10 Marks)
+Study Hours (X) 5 8 10 12 15 4 7 9 11 14
+Marks (Y) 55 70 75 80 90 50 65 72 78 85
+(a) Calculate the Karl Pearson's coefficient of correlation between Study Hours and Marks.
+(b) Determine the two regression equations (Y on X and X on Y).
+(c) Predict the marks of a student who studies for 13 hours a week.
+Q3.
+(a) A software company has two divisions, A and B, developing mobile apps. Division A develops 60%
+of the apps, and Division B develops 40%. It is known that 5% of apps from Division A have bugs,
+while 8% of apps from Division B have bugs. If an app selected at random is found to have a bug, what
+is the probability that it was developed by Division A?
+
+
 P. T. O.
 No. of Printed Pages : 3 MCS-203
 POST GRADUATE DIPLOMA IN
