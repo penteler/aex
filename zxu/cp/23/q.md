@@ -1,71 +1,43 @@
-1. (a) Configure new version of Microsoft edge.
-(b) Open the calendar App and add New Events (any three) and select proper
-time, save and close.
-(c) Schedule a back-up to include the system image.
-(d) Use Disk fragmenter utility to locate and eliminate unnecessary fragments.
-(e) Configure and manage the updates in WINDOWS.
-SECTION-B: LINUX
-Answer the following questions. They carry 20 marks and the viva-voce is of 5
-marks.
-2. Write and execute the following LINUX commands: 5×2=10
-(a) To display the current directory.
-(b) To display the last 2 lines of a text file.
-(c) To encrypt a datafile with a private key.
-(d) To show date and time.
-(e) To delete a file from a sub-directory.
-3. Write a shell program to find sum and average of all the elements given as input
-
-
-1. (a) Use Cortana to search for an app.
-(b) Change the date and time.
-(c) Configure the desktop settings, startup settings, start menu and display
-settings.
-(d) Use disk defragmenter utility.
-(e) Use disk clean-up utility.
-SECTION-B: LINUX
-Answer the following question. They carry 20 marks and 5 marks are for viva-voce.
-2. Write and execute the following LINUX commands: 5×2=10
-(a) To list previously executed commands.
-(b) To open a manual page for knowing the details of “ls” command.
-(c) To show online summary of system status.
-(d) To count characters in a text-file.
-(e) To set file permissions of any file to r, w, x for all.
-3. Write a shell program to combine any two files into a single file (appending) in
-the order they appear in the arguments and display the word count of the
-resultant merged file. 
-
-
-
-1. (a) Personalize your windows desktop.
-(b) Download an App and configure it.
-(c) configure the “STARTUP” option.
-(d) Use Windows Defender.
-(e) Configure Remote Management Settings.
-SECTION-B: LINUX
-Answer the following question. They carry 20 marks and 5 marks are for viva-voce.
-2. Write and execute the following LINUX commands: 5×2=10
-(a) To run a program at a later time.
-(b) To kill any background process.
-(c) To restart suspended job in foreground.
-(d) To summarize free space on disk drive.
-(e) To run a process in background.
-3. Write a shell script that searches a particular pattern (given by user) in the text
-file and display the count of no. of times it occurred in that fil
-
-
-
-1. (a) Configure system recovery.
-(b) Schedule a backup to include system image.
-(c) Uninstall an app which is not useful, as such.
-(d) Update a device driver.
-(e) Use disk clean-up utility.
-SECTION-B: LINUX
-Answer the following question. They carry 20 marks and 5 marks are for viva-voce.
-2. Write and execute the following LINUX commands: 5×2=10
-(a) To display the disk space used by files and directories.
-(b) Use any screen editor to create a file “abc” and write “hello world”.
-(c) To run a program at specified intervals.
-(d) To rename a sun-directory.
-(e) To compare two binary files and report if there are different.
-3. Write a shell program to display all the file names starting with “a” in the
-current directory
+ a) Write a program in C to find the sum of two matrices of order 3×3, entered
+by the user. 10
+b) Write a program in C to find length of a string entered by the user without
+using in-built string functions. 10
+2. Write Python program to perform following. (5+5+5+5) = 20
+a) find product of two matrices, entered by user
+b) Display Fibonacci series up to nth term, given by user
+c) Find factorial of a number(n), entered by user
+d) Find maximum of three numbers entered by user
+a) Write a program in C to find the product of two matrices of order 3×3,
+entered by the user. 10
+b) Write a program in C to count the number of vowels, consonants and spaces,
+in a string entered by the user. 10
+2. a) Write a program in Python to sort a list of tuples using Lambda function, also
+perform the same without using Lambda function. 10
+b) Write program in python to perform following: 5+5
+i) Check if a given year is leap year or not.
+ii) Check if a given number is prime number or not.
+Write a program in C to create a file, open it, type in some characters and
+type the number of characters in that file. 10
+b) Write a recursive program in C to find the Greatest Common Divisor
+(GCD) of the two numbers entered by the user. 10
+2. Create a package in Python named “Interest” and within this package create two
+modules simple.py and compound.py. Introduce simple-interest() function in
+simple.py module and compound-interest() function in compound.py module.
+Now, import the developed package and modules in your program and use the
+functions simple-interest() and compound-interest() to compute simple interest
+and compound interest for the values of Principle amount, rate of interest and
+time period; entered by the user. 20
+Note: Make necessary assumptions if any
+Write a program in C to find the difference of two matrices of order 3×3,
+entered by the user. 10
+b) Write a program in C to reverse a string entered by the user, without using
+inbuilt string functions. 10
+2. Develop a module named calculator.py in Python, which contains two function
+i) factorial (n) and ii) Fibonacci (n), factorial (n) is to find factorial of a number
+entered by the user and Fibonacci (n) is to find Fibonacci series up to a given
+number n, entered by the user
+Perform the following tasks:
+i) import the developed module “Calculator.py”
+ii) Call the functions available in Calculator.py
+a) To generate Fibonacci series up to number n, entered by user.
+b) To determine factorial of the number n, entered by user
