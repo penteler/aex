@@ -4,6 +4,306 @@ Your English first:
 
 This is perfectly natural. I'd probably say:
 
+
+Yes — your instinct is right. The code you wrote is for **binary search in an array**, not for creating a **binary search tree (BST)** and displaying it using **in-order traversal**.
+
+Let's break down what the question is actually asking.
+
+### 1. What is a binary search tree?
+
+A **binary search tree** is made of **nodes**, where each node has:
+
+* a value
+* a pointer to its left child
+* a pointer to its right child
+
+For example, if we insert:
+
+`50, 30, 70, 20, 40, 60, 80`
+
+we get:
+
+```text
+        50
+       /  \
+     30    70
+    / \    / \
+   20 40  60 80
+```
+
+The important BST rule is:
+
+```text
+left side < root < right side
+```
+
+---
+
+### 2. What is in-order traversal?
+
+**In-order traversal** means visiting the nodes in this order:
+
+```text
+LEFT → ROOT → RIGHT
+```
+
+For the tree above:
+
+```text
+        50
+       /  \
+     30    70
+    / \    / \
+   20 40  60 80
+```
+
+We first visit the left subtree:
+
+```text
+20 30 40
+```
+
+then the root:
+
+```text
+50
+```
+
+then the right subtree:
+
+```text
+60 70 80
+```
+
+So the in-order traversal is:
+
+```text
+20 30 40 50 60 70 80
+```
+
+**A particularly useful thing to remember:**
+If you perform an in-order traversal of a correctly constructed BST, you get the values in **sorted order**.
+
+---
+
+### 3. Why are curly braces `{ }` used for arrays?
+
+In C, curly braces are used to **initialize an array with values**.
+
+For example:
+
+```c
+int arr[] = {1, 18, 19, 23, 25, 80, 85, 100};
+```
+
+means:
+
+> Create an integer array and put these values into it.
+
+Conceptually:
+
+```text
+arr[0] = 1
+arr[1] = 18
+arr[2] = 19
+arr[3] = 23
+arr[4] = 25
+...
+```
+
+You can also specify the size:
+
+```c
+int arr[5] = {10, 20, 30, 40, 50};
+```
+
+The braces here are **not related to the `{ }` you use for the body of `main()` or `if` statements**. They have a different purpose: initialization.
+
+---
+
+### 4. Your program is doing something different
+
+You wrote:
+
+```c
+int arr[] = {1, 18, 19, 23, 25, 80, 85, 100};
+```
+
+and then:
+
+```c
+while (low <= high)
+```
+
+with `mid`.
+
+That's the algorithm for **binary search**:
+
+```text
+Array:
+
+1  18  19  23  25  80  85  100
+             ↑
+            key
+```
+
+You're repeatedly looking at the middle element and eliminating half of the array.
+
+The question, however, says:
+
+> "Write a program in C language to create a binary search tree. Display the binary search tree in in-order traversal."
+
+So you need to learn **nodes + pointers + recursion**, rather than binary search in an array.
+
+---
+
+## 5. A simple C program for your question
+
+Here's a fairly beginner-friendly version:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node *left;
+    struct Node *right;
+};
+
+struct Node* createNode(int value) {
+    struct Node* newNode = malloc(sizeof(struct Node));
+
+    newNode->data = value;
+    newNode->left = NULL;
+    newNode->right = NULL;
+
+    return newNode;
+}
+
+struct Node* insert(struct Node* root, int value) {
+
+    if (root == NULL) {
+        return createNode(value);
+    }
+
+    if (value < root->data) {
+        root->left = insert(root->left, value);
+    }
+    else if (value > root->data) {
+        root->right = insert(root->right, value);
+    }
+
+    return root;
+}
+
+void inorder(struct Node* root) {
+
+    if (root != NULL) {
+        inorder(root->left);
+
+        printf("%d ", root->data);
+
+        inorder(root->right);
+    }
+}
+
+int main() {
+
+    struct Node* root = NULL;
+
+    root = insert(root, 50);
+    insert(root, 30);
+    insert(root, 70);
+    insert(root, 20);
+    insert(root, 40);
+    insert(root, 60);
+    insert(root, 80);
+
+    printf("In-order traversal: ");
+
+    inorder(root);
+
+    return 0;
+}
+```
+
+Output:
+
+```text
+In-order traversal: 20 30 40 50 60 70 80
+```
+
+### The key part to understand
+
+This:
+
+```c
+if (value < root->data) {
+    root->left = insert(root->left, value);
+}
+else if (value > root->data) {
+    root->right = insert(root->right, value);
+}
+```
+
+is what creates the BST.
+
+If we're inserting `30` into:
+
+```text
+50
+```
+
+`30 < 50`, so it goes left:
+
+```text
+    50
+   /
+  30
+```
+
+Then inserting `70`:
+
+```text
+70 > 50
+```
+
+so it goes right:
+
+```text
+    50
+   /  \
+  30   70
+```
+
+And so on.
+
+The in-order function is actually very short:
+
+```c
+void inorder(struct Node* root) {
+
+    if (root != NULL) {
+        inorder(root->left);
+        printf("%d ", root->data);
+        inorder(root->right);
+    }
+}
+```
+
+Just remember:
+
+> **In-order = Left → Root → Right**
+
+And for a BST:
+
+> **In-order traversal = sorted values.**
+
+One important distinction for your MCSl-209 question: **binary search** and **binary search tree** sound similar, but they are two different things. Your original program implements binary search; the assignment is asking you to implement a BST.
+
+
+
 > **"Let's go over Bubble Sort. I'm assuming it's highly inefficient."**
 
 Two tiny changes:
